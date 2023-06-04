@@ -18,7 +18,7 @@ spec:
       - name: nodeserver
         image: 624502292488.dkr.ecr.ap-northeast-1.amazonaws.com/jenkins_567:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
         
         
 ---
@@ -33,6 +33,6 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 80
+    targetPort: 3000
     nodePort: 31110
